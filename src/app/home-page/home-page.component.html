@@ -1,0 +1,382 @@
+<html lang="en">
+  <head>
+    <script src="./script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <style>
+      .footer-social-icon-list {
+        list-style: none;
+        display: flex;
+      }
+
+      .organize-description {
+        height: 70px;
+      }
+
+      .footer-copyright {
+        color: #212529;
+        font-size: 12px;
+        position: relative;
+        left: 80px;
+        top: 5px;
+      }
+
+      .social-icon {
+        margin-right: 14px;
+      }
+
+      .next {
+        width: 7.41px;
+        height: 12px;
+      }
+
+      .arrow-btn {
+        position: absolute;
+        right: 2%;
+        top: 853px;
+        height: 40px;
+        width: 40px;
+        border: none;
+        box-shadow: none;
+        border-radius: 50%;
+        background-color: rgba(225, 225, 225, 0.8);
+        align-items: center;
+      }
+
+      body {
+        position: relative;
+        bottom: 12px;
+      }
+
+      .organizer-section {
+        margin-left: 14.41%;
+      }
+
+      .next {
+        position: absolute;
+        right: 13%;
+      }
+
+      @media (max-width: 999px) {
+        .hero-title {
+          position: absolute;
+          top: 190px;
+          left: 24%;
+        }
+
+        .cta-btn {
+          position: relative;
+          left: 25.5%;
+        }
+
+        .footer-content {
+          position: relative;
+        }
+
+        .product {
+          padding-right: 15%;
+        }
+
+        body {
+          position: relative;
+          bottom: 100px;
+        }
+
+        .arrow-btn {
+          position: absolute;
+          right: 11%;
+          top: 851px;
+        }
+
+        .organizer-section {
+          margin-left: 10%;
+        }
+
+        .organize-btn {
+          width: 80%;
+          margin-bottom: 24px;
+        }
+      }
+
+      @media (max-width: 590px) {
+        .hero-section {
+          height: 400px;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .heder-image {
+          height: 300px;
+        }
+
+        .hero-data {
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          position: relative;
+          bottom: 280px;
+          right: 50px;
+        }
+
+        .cta-btn {
+          width: 80%;
+          position: absolute;
+          top: 200px;
+          left: 100px;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .hero-title {
+          position: absolute;
+          top: 130px;
+          left: 150px;
+        }
+
+        .upcoming-event-section {
+          position: relative;
+          bottom: 90px;
+          margin-left: 19%;
+        }
+
+        .upcoming-event-title {
+          margin-left: 40px;
+        }
+
+        .organizer-item {
+          margin: 20px;
+        }
+
+        .product {
+          padding-right: 15%;
+          height: 500px;
+        }
+
+        .button-area {
+          position: relative;
+          bottom: 200px;
+        }
+
+        body {
+          position: relative;
+          bottom: 50px;
+        }
+
+        .organizer-section {
+          position: relative;
+          bottom: 150px;
+          margin-bottom: 0%;
+          margin-left: 5%;
+        }
+
+        .organizer-title {
+          margin-left: 5%;
+        }
+
+        .arrow-btn {
+          position: absolute;
+          top: 3px;
+          right: 0%;
+          margin-right: 0%;
+        }
+
+        .organize-btn {
+          width: 100%;
+        }
+
+        .next-cover {
+          position: absolute;
+          top: 100px;
+          width: 27%;
+        }
+
+        .next {
+          position: absolute;
+          right: 10%;
+        }
+      }
+
+      body::before {
+        display: block;
+        content: "";
+      }
+
+      body {
+        overflow-x: hidden;
+      }
+
+      ul {
+        list-style: none;
+        justify-content: space-between;
+      }
+
+      .icon {
+        width: 15px;
+        height: 15px;
+        margin-bottom: 1.5%;
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      .prev {
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+
+      .slider-main {
+        display: flex;
+      }
+
+      .item {
+        margin: 0%;
+      }
+
+      .card-footer {
+        height: 178px;
+        width: 250px;
+        position: relative;
+        left: 6%;
+        bottom: 17px;
+        background-color: #ffffff;
+        margin-top: 0;
+        box-shadow: 0px 10px 20px rgba(205, 200, 200, 0.8);
+        border-top-right-radius: 0%;
+        border-top-left-radius: 0%;
+      }
+
+      .prev {
+        left: 7.5%;
+        padding: 20px;
+      }
+
+      .arrow-btn:hover {
+        background-color: rgba(182, 179, 179, 0.8);
+      }
+
+      .card {
+        border: none;
+        border-radius: 1px;
+      }
+
+      .arrow-btn:active .prev {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="hero-section">
+      <img class="heder-image" src="./../../assets/header-image.png" alt="" />
+      <div class="hero-data">
+        <p class="hero-title">Your&nbsp;Event&nbsp;Hub!</p>
+        <button class="btn cta-btn">See Events</button>
+      </div>
+    </div>
+
+    <div class="upcoming-event-section">
+      <p class="upcoming-events-title">Upcoming Events</p>
+
+      <section class="product">
+        <div class="container-fluid">
+          <div class="slider-wrap">
+            <div class="slider-main">
+              <div
+                class="item"
+                *ngFor="let ue of upcoming_event_list; let i = index"
+              >
+                <div class="card" [ngClass]="{ last_visible_child: i == 3 }">
+                  <div class="card-body">
+                    <img
+                      src="{{ ue.thumbImage }}"
+                      class="upcoming-event-image"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="card-footer">
+                    <p
+                      class="upcoming-event-title"
+                      routerLink="/event_info/{{ ue.id }}"
+                    >
+                      {{ ue.title }}
+                    </p>
+
+                    <p class="upcoming-event-description">
+                      <span class="date-time">
+                        {{ ue.starting_date }} - {{ ue.finishing_date }} </span
+                      ><br />
+
+                      <span class="event-starting">
+                        <img
+                          src="./../../assets/icons/dollar.png"
+                          alt=""
+                          class="icon"
+                        />
+                        Starting At {{ ue.starting_time }} </span
+                      ><br />
+
+                      <span class="event-location">
+                        <img
+                          src="./../../assets/icons/map.png"
+                          alt=""
+                          class="icon"
+                        />
+                        {{ ue.location }}
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="next-cover"></div>
+            <div class="button-area">
+              <button type="button" class="prev arrow-btn d-none" appNext>
+                <img src="./../../assets/icons/back.png" class="icon" alt="" />
+              </button>
+              <button type="button" class="next arrow-btn" appPrev>
+                <img
+                  src="./../../assets/icons/forward.png"
+                  class="icon"
+                  alt=""
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section>
+      <div class="container">
+        <div class="organizer-section">
+          <p class="organizer-title">Are you an organizer?</p>
+
+          <div class="row">
+            <div class="col-lg-5 col-sm-12" *ngFor="let o of organization_list">
+              <div class="organizer-item">
+                <img src="{{ o.img_source }}" alt="" class="organizer-img" />
+                <div class="organize-data">
+                  <p class="organize-title">
+                    {{ o.title }}
+                  </p>
+                  <div class="organize-description">
+                    {{ o.description }}
+                  </div>
+                  <button class="btn btn-outline organize-btn">
+                    {{ o.button_text }}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+<router-outlet></router-outlet>

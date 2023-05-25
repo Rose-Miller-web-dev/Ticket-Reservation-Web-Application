@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 4.5%;
+  margin-bottom: 5%;
+}
+
+.image-header {
+  align-items: end;
+  width: 444px;
+  height: 336px;
+  margin-left: 4%;
+}
+
+@media screen and (max-width: 990px) {
+  .container {
+    display: block;
+    position: relative;
+    margin: auto;
+  }
+
+  .contact-sec {
+    margin-left: 1%;
+  }
+
+  .image-header {
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+}
+
+.contact-title {
+  color: #252525;
+  font-size: 40px;
+  font-weight: 500;
+  margin: 2%;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #252525;
+  margin-bottom: 1%;
+}
+
+.input-sec {
+  display: block;
+  margin: 2%;
+}
+
+.email-input-sec {
+  margin-bottom: 4%;
+}
+
+.message-input-sec {
+  margin-bottom: 4%;
+}
+
+.email-input {
+  padding: 12px 8px 12px 8px;
+  width: 449px;
+  height: 43px;
+}
+
+.message-input {
+  width: 449px;
+  height: 225px;
+  padding: 12px 8px 12px 8px;
+}
+
+.send-email-btn {
+  width: 259px;
+  height: 42px;
+  background-color: #de6262;
+  color: white;
+  margin: 2%;
+  margin-top: 1%;
+}
+
+.send-email-btn:hover {
+  border-color: #de6262;
+  color: #de6262;
+}
+
+.send-email-btn:active {
+  background-color: #de6262;
+  color: white;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,244 @@
+img {
+  height: 200px;
+  width: 200px;
+}
+
+body {
+  padding: 0px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 200;
+  width: 224px;
+  height: 77px;
+  cursor: pointer;
+}
+
+.nav-link {
+  margin-right: 24px;
+  font-family: Helvetica;
+  font-size: 16px;
+  color: black;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: rgb(147, 147, 147);
+}
+
+.btn {
+  height: 42px;
+  width: 79px;
+  padding-right: 8px;
+  padding-left: 8px;
+  font-family: Helvetica;
+  font-size: 16px;
+}
+
+.signup {
+  background-color: #de6262;
+  color: white;
+  margin-right: 24px;
+}
+
+.signup:hover {
+  background-color: white;
+  color: #de6262;
+  border-color: #de6262;
+}
+
+.signup:active {
+  background-color: #b64b4b;
+  color: white;
+}
+
+.login {
+  border-color: #de6262;
+  color: #de6262;
+}
+
+.login:hover {
+  background-color: #de6262;
+  color: white;
+}
+
+.container {
+  position: relative;
+}
+
+.title-over {
+  position: absolute;
+  color: white;
+}
+
+.col-lg {
+  width: 50%;
+}
+
+.img-pop {
+  width: 200px;
+  height: 350px;
+}
+
+.see-more {
+  position: relative;
+  left: 46.5%;
+}
+
+.header-background {
+  height: 80%;
+}
+
+body::before {
+  display: block;
+  content: "";
+  height: 110px;
+}
+
+.navigation_ {
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.navigation_item:hover {
+  color: #98a09b;
+}
+
+.navigation_item {
+  color: black;
+
+  @media (max-width: 599px) {
+    margin-left: 20px;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+.navigation_mid {
+  background-color: #000411;
+  color: #e1efe6;
+}
+
+.modal-title {
+  color: #de6262;
+  font-weight: 700;
+}
+
+input {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  height: 50px;
+  width: 300px;
+}
+
+.modal-login {
+  background-color: #de6262;
+  color: white;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.modal-login:hover {
+  background-color: white;
+  color: #de6262;
+  border-color: #de6262;
+}
+
+a {
+  text-decoration: none;
+}
+
+.google-login-btn {
+  border-radius: 4px;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin-top: 12px;
+}
+
+.modal-content {
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 30px;
+}
+
+p {
+  align-items: center;
+  justify-content: space-around;
+}
+
+.or_modal {
+  margin-top: 16px;
+  font-size: 16px;
+  color: rgb(49, 48, 48);
+  position: relative;
+  left: 130px;
+}
+
+.google_logo {
+  width: 30px;
+  height: 30px;
+}
+
+.navbar-right-side {
+  display: flex;
+}
+
+.user-icon {
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+
+@media screen and (max-width: 979px) {
+  .navbar-nav {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-nav li {
+    margin-top: 4%;
+  }
+
+  .navbar-buttons {
+    display: none;
+  }
+
+  .user-icon {
+    display: block;
+    position: relative;
+    right: 12px;
+    top: 4px;
+    cursor: pointer;
+    margin-right: 4%;
+  }
+}
+
+@media (max-width: 598px) {
+  .navbar-nav {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-collapse {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding-left: 4%;
+    padding-bottom: 4%;
+  }
+
+  .navbar-buttons {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 979px) {
+  .navigation_ {
+    height: 98px;
+  }
+
+  body {
+    padding-top: 0%;
+  }
+}

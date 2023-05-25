@@ -1,0 +1,71 @@
+<html lang="en">
+  <head></head>
+
+  <body>
+    <div class="container">
+      <div class="events-title">Find Your Events</div>
+
+      <div class="search-box">
+        <div class="location-search-pack search-unit">
+          <label for="location" id="searched-location">Location</label>
+          <input class="location-input" type="text" />
+        </div>
+
+        <div class="date-search-pack search-unit">
+          <label for="date" id="searched-date" style="margin-left: 32px"
+            >Date</label
+          >
+          <input type="text" />
+        </div>
+
+        <button class="btn search-btn">Search</button>
+      </div>
+
+      <div class="row event-list-display">
+        <div class="col-auto events-column" *ngFor="let ue of events_list">
+          <div class="upcoming-event-box">
+            <img
+              src="{{ ue.thumbImage }}"
+              alt=""
+              class="upcoming-event-image"
+            />
+            <div class="upcoming-event-data">
+              <p
+                routerLink="/event_info/{{ ue.id }}"
+                class="upcoming-event-title"
+              >
+                {{ ue.title }}
+              </p>
+              <p class="upcoming-event-description">
+                <span class="date-time">
+                  {{ ue.starting_date }} - {{ ue.finishing_date }} </span
+                ><br />
+
+                <span class="event-starting">
+                  <img
+                    src="./../../assets/icons/dollar.png"
+                    alt=""
+                    class="icon"
+                  />
+                  Starting At {{ ue.starting_time }} </span
+                ><br />
+
+                <span class="event-location">
+                  <img src="./../../assets/icons/map.png" alt="" class="icon" />
+                  {{ ue.location }}
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-area">
+        <button class="btn btn-outline see_more_events_btn">
+          See more events
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
+<router-outlet></router-outlet>

@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .submit-ticket-btn:hover {
+        border-color: #de6262;
+        color: #de6262;
+      }
+
+      .selected-ticket-list {
+        list-style: none;
+        color: #252525;
+        font-size: 16px;
+        font-weight: 400;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .selected-ticket {
+        font-size: 16px;
+        font-weight: 400;
+        color: #252525;
+        font-family: Helvetica;
+      }
+
+      .selected-ticket {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .fee-sec {
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .fee-price-par {
+        margin-top: 9%;
+        position: relative;
+      }
+
+      .fee-price-amount {
+        margin-top: 9%;
+      }
+
+      .selected-ticket-list {
+        align-items: start;
+        justify-content: space-between;
+        border-bottom: 2.5px solid #212529;
+      }
+
+      .total-cost-sec {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid black;
+        padding: 3%;
+      }
+
+      .fee {
+        font-size: 16px;
+        font-weight: 400;
+        color: #252525;
+        font-family: Helvetica;
+      }
+
+      .ticket-number {
+        margin-right: 20px;
+      }
+
+      .not_available {
+        background-color: #efefef;
+
+        padding-bottom: 0%;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .not_available_label span {
+        color: #a29d9d;
+      }
+
+      @media screen and (max-width: 1300px) {
+        .header-img-info {
+          width: 631px;
+        }
+
+        .info-container {
+          width: 100%;
+        }
+
+        .info-detail {
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 1098px) {
+        .info-detail {
+          display: block;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .not_available {
+          padding-right: 0%;
+          width: 100%;
+        }
+
+        .second-class {
+          padding-right: 12%;
+          position: relative;
+          left: 3%;
+        }
+
+        .header-img-info {
+          width: 561px;
+        }
+
+        .event-title-box {
+          padding: 3%;
+          padding-top: 10%;
+        }
+
+        .event-data-box {
+          width: 100%;
+          align-items: center;
+          justify-content: space-between;
+          margin: 1%;
+          margin-top: 5%;
+          position: relative;
+          right: 8%;
+        }
+
+        .ticket-sec-md {
+          width: 111%;
+          align-items: center;
+          position: relative;
+          right: 7%;
+        }
+
+        .report {
+          text-align: center;
+        }
+
+        .info-detail {
+          width: 100%;
+          display: block;
+        }
+
+        .ticket-reserve-sec {
+          display: none;
+        }
+
+        .ticket-sec-md {
+          display: block;
+        }
+      }
+
+      @media screen and (max-width: 799px) {
+        .info-detail {
+          margin-left: auto;
+          align-items: center;
+          justify-content: center;
+          margin-left: 4%;
+          width: 100%;
+        }
+
+        .ticket-reserve-sec {
+          display: none;
+        }
+
+        .ticket-sec-md {
+          display: block;
+          margin-left: 4%;
+          width: 110%;
+        }
+
+        .event-info-header-box {
+          display: block;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .event-title-box {
+          height: fit-content;
+          padding: 26px 20px 26px 20px;
+          width: 100%;
+        }
+
+        .header-img-info {
+          width: 100%;
+        }
+
+        .event-data-box {
+          margin-top: 5%;
+          width: 100.5%;
+          position: relative;
+          right: 5%;
+        }
+
+        body {
+          padding-right: 0%;
+          padding-left: 0%;
+        }
+
+        .report {
+          text-align: center;
+        }
+      }
+
+      li {
+        list-style: none;
+      }
+
+      .icon {
+        width: 15px;
+        height: 15px;
+      }
+
+      .report {
+        position: relative;
+        right: 7.5%;
+      }
+
+      .modal-header {
+        display: block;
+        text-align: center;
+      }
+
+      .modal-title {
+        font-size: 40px;
+        font-weight: 500;
+        color: #252525;
+      }
+
+      .modal-sub {
+        font-size: 16px;
+        font-weight: 400;
+        color: #252525;
+        font-family: Helvetica;
+      }
+
+      .modal-link {
+        font-size: 16px;
+        font-weight: 400;
+        color: #252525;
+        font-family: Helvetica;
+      }
+
+      .personal-form-title {
+        font-size: 20px;
+        font-weight: 500;
+        color: #252525;
+      }
+
+      .modal-body {
+        display: block;
+      }
+
+      .payment-form {
+        display: block;
+        padding: 3%;
+        border: 1px solid rgb(0, 0, 0, 0.08);
+        border-radius: 4px;
+        margin: 4%;
+        padding-left: 5%;
+      }
+
+      .form-label {
+        font-size: 16px;
+        font-weight: 400;
+        color: #252525;
+        margin-bottom: 0%;
+        margin-top: 2%;
+      }
+
+      .form-input {
+        width: 335px;
+        height: 43px;
+        padding: 12px 8px 12px 8px;
+      }
+
+      .card-input {
+        width: 131px;
+        height: 43px;
+        margin-bottom: 4%;
+      }
+
+      .card-info {
+        display: flex;
+        align-items: start;
+        justify-content: space-around;
+        position: relative;
+        right: 8%;
+        margin-bottom: 4%;
+        margin-top: 4%;
+      }
+
+      .card-input-unit {
+        display: block;
+      }
+
+      .payment-apply {
+        display: flex;
+      }
+
+      .payment-apply button {
+        width: 131px;
+        height: 43px;
+        background-color: #de6262;
+        color: white;
+        text-align: center;
+        position: relative;
+        top: 29px;
+        left: 20%;
+      }
+
+      .modal-payment-summary {
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-event-name {
+        font-size: 16px;
+        font-weight: 700;
+        color: #252525;
+        text-align: start;
+        margin: 2%;
+        margin-left: 8%;
+      }
+
+      .modal-selected-tickets {
+        padding-right: 6%;
+      }
+
+      .modal-selected-tickets li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 8%;
+        padding-left: 1.5%;
+        margin-bottom: 2%;
+        padding-bottom: 2%;
+      }
+
+      .modal-total-cost {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 2px solid #212529;
+        width: 80%;
+        position: relative;
+        left: 4%;
+        margin: 4%;
+        padding-top: 4%;
+      }
+
+      .modal-make-payment {
+        position: relative;
+        left: 9%;
+        margin: 6%;
+        margin-bottom: 12%;
+      }
+
+      .make-payment {
+        background-color: #de6262;
+        color: white;
+        width: 332px;
+        height: 42px;
+      }
+
+      .make-payment button:hover {
+        border-color: #de6262;
+        color: #de6262;
+      }
+
+      .container {
+        margin-top: 0.91%;
+      }
+
+      .ticket-md-btn {
+        text-align: center;
+        width: 90%;
+        margin-top: 1%;
+        background-color: #de6262;
+        color: #efefef;
+        font-family: Helvetica;
+      }
+
+      .ticket-md-btn:hover {
+        border-color: #de6262;
+        color: #de6262;
+      }
+
+      .price-floor {
+        width: 90%;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 5%;
+        padding-left: 1%;
+        padding-right: 1%;
+      }
+
+      .price-floor span {
+        font-family: Helvetica;
+      }
+
+      .modal-dialog {
+        width: 100%;
+      }
+
+      .modal-title h2 {
+        font-size: 20px;
+        font-weight: 500;
+        color: #252525;
+        font-family: Helvetica;
+      }
+
+      .modal-title p {
+        font-size: 16px;
+        font-weight: 400;
+        color: #252525;
+        font-family: Helvetica;
+      }
+
+      body {
+        position: relative;
+        bottom: 26px;
+      }
+
+      .ticket-reserve-sec {
+        padding: 24px 10px 24px 16px;
+      }
+
+      .not_available button {
+        background-color: #dddddd;
+      }
+
+      .available button {
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 4px;
+        margin-right: 20px;
+      }
+
+      .available input {
+        margin-left: 20px;
+      }
+
+      .event-data-box {
+        min-width: 200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="event-info-header-box">
+        <div class="event-img-box">
+          <img class="header-img-info" src="{{ event_image_src }}" alt="" />
+        </div>
+        <div class="event-title-box">
+          <h1 class="event-title title-box-content">
+            {{ event_title }}
+          </h1>
+          <p class="event-category title-box-content">
+            {{ event_category }}
+          </p>
+          <p class="event-owner title-box-content">
+            {{ event_owner }}
+          </p>
+        </div>
+      </div>
+
+      <div class="info-detail">
+        <div class="info-container">
+          <div class="event-data-box">
+            <div class="event-discription info-box">
+              <div class="description-title info-title">Description</div>
+
+              <div class="description-par info-par">
+                {{ event_description }}
+              </div>
+            </div>
+
+            <div class="event-date info-box">
+              <div class="date-title info-title">Date</div>
+              {{ event_starting_date }}, {{ event_finishing_date }}
+              <div class="date-par info-par"></div>
+            </div>
+
+            <div class="event-location info-box">
+              <div class="location-title info-title">Location</div>
+              {{ event_address }}
+              <div class="location-par info-par"></div>
+            </div>
+
+            <div class="event-policy info-box">
+              <div class="policy-title info-title">Refund Policy</div>
+              {{ event_refund }}
+              <div class="policy-par info-par"></div>
+            </div>
+          </div>
+
+          <div class="report">
+            <p class="report-par">
+              <img src="./../../assets/icons/report.png" class="icon" alt="" />
+              report&nbsp;this&nbsp;listing
+            </p>
+          </div>
+        </div>
+
+        <div class="ticket-reserve-sec">
+          <div class="ticket-classification">
+            <div>
+              <form
+                class="first-class ticket-form"
+                [ngClass]="{ not_available: is_first_class_disabled == true }"
+              >
+                <label
+                  class="first-class-item"
+                  for="tentacles"
+                  [ngClass]="{
+                    not_available_label: is_first_class_disabled == true
+                  }"
+                >
+                  <span class="ticket-class-name">Eary&nbsp;Bird</span><br />
+                  <span class="price-tag">
+                    CA&nbsp;$&nbsp;{{ first_class_ticket_price }}</span
+                  >
+                </label>
+
+                <input
+                  type="number"
+                  class="first-class-item"
+                  id="tentacles1"
+                  name="tentacles1"
+                  max="100"
+                  min="0"
+                  placeholder="0"
+                  [readOnly]="is_first_class_disabled"
+                  (input)="get_first_input($event)"
+                />
+              </form>
+            </div>
+
+            <form
+              [formGroup]="inputForm"
+              class="second-class ticket-form available"
+              (ngSubmit)="submitForm()"
+            >
+              <label for="tentacles">
+                <span class="ticket-class-name">Regular</span><br />
+                <span class="price-tag"
+                  >CA&nbsp;$&nbsp;{{ second_class_ticket_price }}</span
+                >
+              </label>
+
+              <input
+                type="number"
+                class="form-control"
+                id="tentacles2"
+                name="tentacles2"
+                max="100"
+                min="0"
+                placeholder="0"
+                [readOnly]="is_second_class_disabled"
+                formControlName="second_ticket_number"
+                (input)="get_second_input($event)"
+              />
+            </form>
+          </div>
+
+          <div
+            class="payment-summary"
+            [style.display]="is_submit_ticket_disabled ? 'none' : 'block'"
+          >
+            <p class="payment-summary-title">Payment Summary</p>
+
+            <ul class="list-of-selected-tickets">
+              <li
+                class="sec-of-first"
+                [style.display]="first_class_ticket_number ? 'flex' : 'none'"
+              >
+                <div class="title-of-first-selected">
+                  {{ first_class_name }} {{ first_class_ticket_number }}
+                </div>
+
+                <div class="cost-of-first cost-of">
+                  CA${{ first_final_cost }}
+                </div>
+              </li>
+
+              <li
+                class="sec-of-second"
+                [style.display]="second_class_ticket_number ? 'flex' : 'none'"
+              >
+                <div class="title-of-second-selected">
+                  {{ second_class_name }} {{ second_class_ticket_number }}
+                </div>
+
+                <div class="cost-of-second cost-of">
+                  CA${{ second_final_cost }}
+                </div>
+              </li>
+
+              <li class="sec-of-fee" [style.display]="false">
+                <div class="title-of-fee">Proceeding&nbsp;fee</div>
+
+                <div class="cost-of-fee cost-of">
+                  CA${{ processing_fee_price }}
+                </div>
+              </li>
+            </ul>
+
+            <div class="total-cost-sec">
+              <div class="total-cost-par fee">Total</div>
+
+              <div class="total-cost-amount fee">CA $ {{ total_cost }}</div>
+            </div>
+          </div>
+
+          <div class="submit-ticket">
+            <button
+              [disabled]="is_submit_ticket_disabled"
+              type="button"
+              class="btn submit-ticket-btn"
+              data-bs-toggle="modal"
+              data-bs-target="#paymentModal"
+            >
+              Check Out CA${{ total_cost }}
+            </button>
+          </div>
+        </div>
+
+        <div class="ticket-sec-md">
+          <div class="price-floor d-flex">
+            <span>Starting At</span>
+            <span>CA$ {{ second_class_ticket_price }}</span>
+          </div>
+          <button
+            type="button"
+            routerLink="/purchase"
+            class="ticket-md-btn btn"
+          >
+            Select Tickets
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal-payment modal fade"
+      id="paymentModal"
+      aria-labelledby="modalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <p class="modal-title" id="exampleModalLabel">Payment detail</p>
+            <p class="modal-sub">
+              Do you have an account? <a class="modal-link" href="">Log in</a>
+            </p>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <form class="payment-form" action="">
+              <p class="personal-form-title">Personal Information</p>
+
+              <label for="exampleFormControlInput1" class="form-label"
+                >Last Name</label
+              >
+              <input type="text" class="form-control form-input" />
+
+              <label for="exampleFormControlInput1" class="form-label"
+                >First Name</label
+              >
+              <input type="text" class="form-control form-input" />
+
+              <label for="exampleFormControlInput1" class="form-label"
+                >Email address</label
+              >
+              <input type="email" class="form-control form-input" />
+            </form>
+
+            <form class="payment-form" action="">
+              <p class="personal-form-title">Payment Information</p>
+
+              <label for="exampleFormControlInput1" class="form-label"
+                >Confirm email address</label
+              >
+              <input type="email" class="form-control form-input" />
+
+              <label for="exampleFormControlInput1" class="form-label"
+                >Card holdername</label
+              >
+              <input type="text" class="form-control form-input" />
+
+              <label for="exampleFormControlInput1" class="form-label"
+                >Card number</label
+              >
+              <input class="form-control form-input" />
+
+              <div class="card-info">
+                <div class="card-input-unit">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >CVV</label
+                  >
+                  <input type="text" class="form-control card-input" />
+                </div>
+
+                <div class="card-input-unit">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >Expiry&nbsp;month/year</label
+                  >
+                  <input type="text" class="form-control card-input" />
+                </div>
+              </div>
+
+              <div class="payment-apply">
+                <div class="card-input-unit">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >Promo code</label
+                  >
+                  <input type="number" class="form-control card-input" />
+                </div>
+
+                <button class="btn payment-apply" type="submit">Apply</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="modal-payment-summary">
+            <div class="modal-event-name">
+              <!-- {{ event_displaying.title }} -->
+            </div>
+
+            <ul class="modal-selected-tickets">
+              <li class="modal-first">
+                <div class="modal-selected-title">
+                  {{ first_class_name }} {{ first_class_ticket_number }}
+                </div>
+
+                <div class="modal-cost">CA${{ first_final_cost }}</div>
+              </li>
+
+              <li class="modal-second">
+                <div class="modal-selected-title">
+                  {{ second_class_name }} {{ second_class_ticket_number }}
+                </div>
+
+                <div class="modal-cost">CA${{ second_final_cost }}</div>
+              </li>
+
+              <li class="modal-fee">
+                <div class="modal-selected-title">Proceeding fee</div>
+
+                <div class="modal-cost">CA${{ processing_fee_price }}</div>
+              </li>
+            </ul>
+
+            <div class="modal-total-cost">
+              <div class="total-cost-par fee">Total</div>
+
+              <div class="total-cost-amount fee">CA $ {{ total_cost }}</div>
+            </div>
+          </div>
+
+          <div class="modal-make-payment">
+            <button class="button btn make-payment">Make Payment</button>
+          </div>
+        </div>
+
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+  </body>
+</html>
+<router-outlet></router-outlet>

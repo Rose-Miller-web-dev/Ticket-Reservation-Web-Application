@@ -1,0 +1,36 @@
+<html lang="en">
+  <head></head>
+  <body>
+    <div class="container">
+      <div class="screen-left">
+        <p class="contact-title">Contact Us</p>
+
+        <div class="contact-sec">
+          <div class="contact-input">
+            <div class="email-input-sec input-sec">
+              <label for="email">Email address</label>
+              <input
+                type="email"
+                class="form-control email-input"
+                id="email_content"
+              />
+            </div>
+            <div class="message-input-sec input-sec">
+              <label for="message">Message</label>
+              <input type="text" class="form-control message-input" />
+            </div>
+          </div>
+          <div class="img-header"></div>
+        </div>
+
+        <button class="btn send-email-btn" (click)="send()">Send</button>
+      </div>
+
+      <div class="screen-right">
+        <img src="{{ contact_header_image }}" alt="" class="image-header" />
+      </div>
+    </div>
+  </body>
+</html>
+
+<router-outlet></router-outlet>

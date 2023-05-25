@@ -1,0 +1,122 @@
+{
+  "upcoming_events": [
+    {
+      "id": 0,
+      "title": "Vancouver 80’s Club Night Party",
+      "starting_date": "Sat, Jun 18",
+      "finishing_date": "Sun, Jun 19",
+      "starting_time": "CA 15:00",
+      "location": "Vanvouver",
+      "thumbImage": "./../../assets/u0.jpg",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis ex autem perspiciatis deleniti cupiditate optio ipsum, asperiores quisquam, doloribus perferendis earum quas eligendi repellat ab possimus est, nulla consequuntur incidunt.",
+      "refund_policy": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis ex autem perspiciatis deleniti cupiditate optio ipsum, asperiores quisquam, doloribus perferendis earum quas eligendi repellat ab possimus est, nulla consequuntur incidunt.",
+      "owner":"Chopif Vancity",
+      "category":"Fun Hangout Party",
+      "address": "122 East Hastings St, Vancouver, BC, V6A 1N4, Canada"
+    }, 
+
+    {
+      "id": 1,
+      "title": "THE MOTIVE",
+      "starting_date": "Sat, Jun 18",
+      "finishing_date": "Sun, Jun 19",
+      "starting_time": "CA 15:00",
+      "location": "Vanvouver",
+      "thumbImage": "./../../assets/u1.jpg",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis ex autem perspiciatis deleniti cupiditate optio ipsum, asperiores quisquam, doloribus perferendis earum quas eligendi repellat ab possimus est, nulla consequuntur incidunt.",
+      "refund_policy": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis ex autem perspiciatis deleniti cupiditate optio ipsum, asperiores quisquam, doloribus perferendis earum quas eligendi repellat ab possimus est, nulla consequuntur incidunt.",
+      "address": ""
+    },
+
+    {
+      "id": 2,
+      "title": "Saturday Night Stand Up Comedy",
+      "starting_date": "Sat, Jun 18",
+      "finishing_date": "Sun, Jun 19",
+      "starting_time": "CA 15:00",
+      "location": "Vanvouver",
+      "thumbImage": "./../../assets/u2.jpg",
+      "description": "",
+      "refund_policy": "",
+      "address": ""
+    },
+
+    {
+      "id": 3,
+      "title": "Summer Party",
+      "starting_date": "Sat, Jun 18",
+      "finishing_date": "Sun, Jun 19",
+      "starting_time": "CA 15:00",
+      "location": "Vanvouver",
+      "thumbImage": "./../../assets/u3.jpg",
+      "description": "",
+      "refund_policy": "",
+      "address": ""
+    },
+
+    {
+      "id": 4,
+      "title": "World_Famous Part",
+      "starting_date": "Sat, Jun 18",
+      "finishing_date": "Sun, Jun 19",
+      "starting_time": "CA 15:00",
+      "location": "Vanvouver",
+      "thumbImage": "./../../assets/u4.jpg",
+      "description": "",
+      "refund_policy": "",
+      "address": ""
+    },
+
+    {
+      "id": 5,
+      "title": "Night Night",
+      "starting_date": "Sat, Jun 18",
+      "finishing_date": "Sun, Jun 19",
+      "starting_time": "CA 15:00",
+      "location": "Vanvouver",
+      "thumbImage": "./../../assets/u5.jpg",
+      "description": "",
+      "refund_policy": "",
+      "address": ""
+    },
+
+    {
+      "id": 6,
+      "title": "Taylor Swift Dance Party in BC",
+      "starting_date": "Sat, Jun 18",
+      "finishing_date": "Sun, Jun 19",
+      "starting_time": "CA 15:00",
+      "location": "Vanvouver",
+      "thumbImage": "./../../assets/u6.jpg",
+      "description": "",
+      "refund_policy": "",
+      "address": ""
+    },
+
+    {
+      "id": 7,
+      "title": "Treat Show",
+      "starting_date": "Sat, Jun 18",
+      "finishing_date": "Sun, Jun 19",
+      "starting_time": "CA 15:00",
+      "location": "Vanvouver",
+      "thumbImage": "./../../assets/u7.jpg",
+      "description": "",
+      "refund_policy": "",
+      "address": ""
+    },
+
+    {
+      "id": 8,
+      "title": "Mask Party",
+      "starting_date": "Sat, Jun 18",
+      "finishing_date": "Sun, Jun 19",
+      "starting_time": "CA 15:00",
+      "location": "Vanvouver",
+      "thumbImage": "./../../assets/u8.jpg",
+      "description": "",
+      "refund_policy": "",
+      "address": ""
+    }
+  ]
+}

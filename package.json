@@ -1,0 +1,53 @@
+{
+  "name": "jangubuzz",
+  "version": "16.13.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "start-pwa": "ng build && http-server -p 8080 -c-1 dist/jangubuzz",
+    "server": "json-server --watch db.json --port 5000",
+    "format": "prettier --write ."
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^15.1.4",
+    "@angular/common": "^15.1.4",
+    "@angular/compiler": "^15.1.4",
+    "@angular/forms": "^15.1.4",
+    "@angular/platform-browser": "^15.1.4",
+    "@angular/platform-browser-dynamic": "^15.1.4",
+    "@angular/router": "^15.1.4",
+    "@angular/service-worker": "^15.1.4",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "ng-image-slider": "^7.0.0",
+    "nodemailer": "^6.9.1",
+    "rxjs": "~7.8.0",
+    "swiper": "^9.0.5",
+    "web3": "^0.20.7",
+    "zone.js": "~0.12.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^15.1.4",
+    "@angular/cli": "~15.1.4",
+    "@angular/compiler-cli": "^15.1.4",
+    "@angular/core": "^15.1.4",
+    "@types/jest": "^29.4.0",
+    "@types/mocha": "^10.0.1",
+    "jasmine": "~4.3.0",
+    "jasmine-core": "~4.5.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.0.0",
+    "ngx-owl-carousel-o": "^15.0.0",
+    "prettier": "^2.4.1",
+    "tslib": "^2.5.0",
+    "typescript": "~4.9.4"
+  }
+}
